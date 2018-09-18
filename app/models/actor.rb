@@ -7,8 +7,7 @@ class Actor < ActiveRecord::Base
     name
   end
   def list_roles
-    Character.all.each do |c|
-      c.artist = self
+    Character.find_by(artist: self)
     end
   end
 
