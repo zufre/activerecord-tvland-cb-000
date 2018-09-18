@@ -7,7 +7,9 @@ class Actor < ActiveRecord::Base
     name
   end
   def list_roles
-    Character.self
+    Character.roles.each do |c|
+      c.artist = self
+    end
   end
 
 end
