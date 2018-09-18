@@ -8,7 +8,7 @@ class Actor < ActiveRecord::Base
   end
   def list_roles
     Character.find_by(artist_id: self.id)
-  
+
   end
 
 end
