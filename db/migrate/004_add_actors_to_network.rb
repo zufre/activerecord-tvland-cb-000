@@ -1,6 +1,7 @@
 class AddActorsToNetwork < ActiveRecord::Migration[4.2]
   def change
     create_table :actors do |t|
+      t.integer :id
       t.string :first_name
       t.string :last_name
       
