@@ -7,21 +7,9 @@ class Actor < ActiveRecord::Base
     name
   end
   def list_roles
-    characters = []
-    show_names = []
-
-    self.characters.each do |char_instance|
-      characters << char_instance.name
-    end
-
-    self.shows.each do |show_instance|
-      show_names << show_instance.name
-    end
-
-    characters = characters.join()
-    show_names = show_names.join()
-
-    return characters + " -" + show_names
+    roles = ""
+    self.characters.each do |c|
+      roles << "#{c.name} - #{c.show.name}"
   end
 
 end
