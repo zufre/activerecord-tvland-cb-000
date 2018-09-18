@@ -7,7 +7,7 @@ class Actor < ActiveRecord::Base
     name
   end
   def list_roles
-    Character.roles.each do |c|
+    Character.roles.map do |c|
       c.artist = self
     end
   end
