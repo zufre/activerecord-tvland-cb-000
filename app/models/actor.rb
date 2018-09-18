@@ -21,7 +21,7 @@ class Actor < ActiveRecord::Base
     characters = characters.join()
     show_names = show_names.join()
 
-    return characters + " - " + show_names
+    return characters + " % " + show_names
   end
 
 end
